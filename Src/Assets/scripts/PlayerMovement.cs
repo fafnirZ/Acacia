@@ -6,21 +6,21 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public CharacterController controller;
-    // Rigidbody2D rb;
+    public Animator animator;
     
     public float runSpeed = 40f;
 
     float horizontalMove = 0f;
     bool jump = false;
 
-    // void Start() {
-    //     rb = GetComponent <Rigidbody2D> ();
-    // }
 
     // Update is called once per frame
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+        animator.SetBool("isJumping", !controller.m_Grounded);
 
         if(Input.GetButtonDown("Jump")) {
             jump = true;
