@@ -1623,6 +1623,7 @@ GameObject:
   - component: {fileID: 2125485840}
   - component: {fileID: 2125485846}
   - component: {fileID: 2125485847}
+  - component: {fileID: 2125485848}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1715,6 +1716,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 1669361683}
   m_CeilingCheck: {fileID: 1896870533}
   m_CrouchDisableCollider: {fileID: 0}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1822,3 +1824,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2125485848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125485839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d704fd7756221c841bdeada7e7295193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 2125485843}
+  animator: {fileID: 2125485847}
