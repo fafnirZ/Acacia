@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    [SerializeField] Vector3 offset;
+    [SerializeField] private Vector3 offset;
     [Range(1,10)]
     [SerializeField] private float smoothFactor; 
     [SerializeField] private Vector3 minValues, maxValues;
