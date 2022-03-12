@@ -14,9 +14,9 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamage(float amount){
         health -= amount;
-        StartCoroutine(HitAnimation());
+        StartCoroutine(HitAnim());
     }
-    IEnumerator HitAnimation(){
+    IEnumerator HitAnim(){
         animator.SetBool("hit", true);
         yield return new WaitForSeconds(0.5f);
 
@@ -31,4 +31,5 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
+
 }
