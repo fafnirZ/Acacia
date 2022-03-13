@@ -25,7 +25,7 @@ public class SpawnManager : MonoBehaviour
         return randomMob;
     }
 
-    async void SpawnMobs(){
+    void SpawnMobs(){
         int mobCount = FindObjectsOfType<Enemy>().Length;
 
         if (mobCount < maxMobCount){
