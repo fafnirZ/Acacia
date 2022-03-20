@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> mobsToSpawn;
+    [SerializeField] private List<EnemyBase> enemiesToSpawn;
+    [SerializeField] private GameObject EnemyPrefab;
     [SerializeField] private Vector2 spawnRangeX, spawnRangeY;
     [SerializeField] float spawnRate = 5f;
     [SerializeField] int maxMobCount = 5;
@@ -20,9 +21,9 @@ public class SpawnManager : MonoBehaviour
         Vector3 randomPos = new Vector3(spawnPosX, spawnPosY, 0);
         return randomPos;
     }
-    private GameObject RandomMob(){
-        GameObject randomMob = mobsToSpawn[Random.Range(0,mobsToSpawn.Count)];
-        return randomMob;
+    private EnemyBase EnemyToSpawn(){
+        EnemyBase randomEnemy = enemiesToSpawn[Random.Range(0,enemiesToSpawn.Count)];
+        return randomEnemy;
     }
 
     void SpawnMobs(){
@@ -30,7 +31,10 @@ public class SpawnManager : MonoBehaviour
 
         if (mobCount < maxMobCount){
             for (int i = 0; i < maxMobCount - mobCount; i++)
-                Instantiate(RandomMob(), GenerateSpawnPosition(), RandomMob().transform.rotation);
+            {
+                var newEnemy = Instantiate(EnemyPrefab, GenerateSpawnPosition(), EnemyPrefab.transform.rotation);
+                newEnemy.GetComponent<Enemy>().LoadData(EnemyToSpawn());
+            }
         }
         else return;
     }

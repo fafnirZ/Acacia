@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39127151147158e47b05ac78c8777b28, type: 3}
+  m_Name: RedSnail
+  m_EditorClassIdentifier: 
+  mobName: Red Snail
+  description: a blue rat
+  health: 50
+  speed: 1
+  damage: 1
+  defaultSprite: {fileID: 16162311542995731, guid: 1c17e92cda54e2a41a42443648fa8b47, type: 3}
+  idleSprites:
+  - {fileID: 16162311542995731, guid: 1c17e92cda54e2a41a42443648fa8b47, type: 3}
+  moveSprites:
+  - {fileID: 7145795083655629504, guid: 1c17e92cda54e2a41a42443648fa8b47, type: 3}
+  - {fileID: 4613700219615761743, guid: 1c17e92cda54e2a41a42443648fa8b47, type: 3}
+  - {fileID: 5062311484050059531, guid: 1c17e92cda54e2a41a42443648fa8b47, type: 3}
+  - {fileID: -5012483153774696242, guid: 1c17e92cda54e2a41a42443648fa8b47, type: 3}
+  hitSprites:
+  - {fileID: 6076724078048637561, guid: 1c17e92cda54e2a41a42443648fa8b47, type: 3}
+  deathSprites:
+  - {fileID: -6392666547496664524, guid: 1c17e92cda54e2a41a42443648fa8b47, type: 3}
+  - {fileID: -235808377536575838, guid: 1c17e92cda54e2a41a42443648fa8b47, type: 3}
+  - {fileID: 6643260618934562812, guid: 1c17e92cda54e2a41a42443648fa8b47, type: 3}

@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    public CharacterController controller;
-    public Animator animator;
-
+    CharacterController controller;
     float horizontalMove = 0f;
     bool jump = false;
 
+    void Awake(){
+        controller = GetComponent<CharacterController>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal");
-
-        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
-        animator.SetBool("isJumping", !controller.m_Grounded);
-
         if(Input.GetButtonDown("Jump")) {
             jump = true;
         }

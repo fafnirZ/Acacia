@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour
 
     private float attackTimer;
     public float timeBetweenAttack;
-    public float damage = 50f;  
+    public int damage = 50;  
     [Header("HitBox")]
     public Transform attackPos;
     public float attackRange;

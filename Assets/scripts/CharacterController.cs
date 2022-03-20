@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class CharacterController : MonoBehaviour
 {
+	CharacterAnimator animator;
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[SerializeField] private float m_RunSpeed = 40f;
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -34,6 +35,7 @@ public class CharacterController : MonoBehaviour
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+		animator = GetComponent<CharacterAnimator>();
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
@@ -64,6 +66,9 @@ public class CharacterController : MonoBehaviour
 
 	public void Move(float move, bool crouch, bool jump)
 	{
+		animator.isJumping = !m_Grounded;
+		animator.speed = Mathf.Abs(move);
+
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
 		{
