@@ -56,6 +56,8 @@ public class EnemyAnimator : MonoBehaviour
         else 
             currentAnim = deathAnim;
 
+        
+
         currentAnim.HandleUpdate();
     }
 }

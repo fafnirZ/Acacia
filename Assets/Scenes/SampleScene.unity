@@ -1590,7 +1590,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0f1850dd98a3e5c4f894cd0839d48cfe, type: 2}
   - {fileID: 11400000, guid: 9b197953662f50847914cca0a56c1f13, type: 2}
   EnemyPrefab: {fileID: 3039816948591543355, guid: 722f3dc382db0804ca84976bee2f555f, type: 3}
-  spawnRangeX: {x: 7, y: 10}
+  spawnRangeX: {x: 6, y: 10}
   spawnRangeY: {x: -6.51, y: -6.51}
   spawnRate: 10
   maxMobCount: 5
