@@ -35,7 +35,7 @@ public class CharacterController : MonoBehaviour
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-		animator = GetComponent<CharacterAnimator>();
+		animator = GetComponent<CharacterAnimator>(); // change
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
